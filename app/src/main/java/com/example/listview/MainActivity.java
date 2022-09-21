@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.ims.ImsMmTelManager;
 import android.view.View;
@@ -41,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         lvItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this, ""+itemArrayList.get(i).getTieuDe(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, detail4.class);
+                startActivity(intent);
                 viTri = i;
             }
         });
